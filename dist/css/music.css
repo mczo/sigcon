@@ -1,0 +1,69 @@
+.ms-focus svg {
+    fill: var(--sakura-color) !important;
+}
+
+#player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    padding-right: var(--padding-box);
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 10;
+    opacity: .9;
+}
+
+#player .pic {
+    width: 4rem;
+    height: 4rem;
+}
+
+#player .music-title {
+    margin-left: var(--padding-box);
+}
+
+#player .container {
+    height: 100%;
+}
+
+#player .contorl span {
+    margin-right: 1.4rem;
+    cursor: pointer;
+}
+
+#player .contorl span:last-child {
+    margin-right: 0;
+}
+
+#player .contorl svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: #656565;
+}
+
+#player .playbar {
+    position: absolute;
+    width: 100%;
+    height: .4rem;
+    left: 0;
+    bottom: 100%;
+    cursor: pointer;
+}
+
+#player .playbar div {
+    width: 0;
+    height: 100%;
+    background: var(--sakura-color);
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transition: width ease-out 200ms;
+}
+
+@keyframes music-bar-end {
+    to {
+        width: 100%;
+    }
+}
+

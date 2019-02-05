@@ -1,0 +1,101 @@
+[data-rel~="lightbox"]{
+    cursor: zoom-in;
+}
+
+#lightbox .loader h1 {
+    color: #fefefe;
+}
+
+#lightbox img {
+    max-width: 95%;
+    max-height: 95%;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    box-shadow: 0 0 10px #828282;
+    border-radius: 3px;
+}
+
+#lightbox.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#lightbox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .6s, opacity .6s;
+}
+
+#lightbox span.bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    cursor: zoom-out;
+}
+
+#lightbox .title {
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: .8rem;
+    padding: .7rem 1rem;
+    font-size: 1.1rem;
+    z-index: 4;
+}
+#lightbox .title:hover {
+    opacity: .5;
+}
+
+#lightbox .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 4;
+}
+
+#lightbox .close svg {
+    width: 2.4em;
+    height: 2.4em;
+    fill: #a3a3a3;
+}
+/*分页*/
+#lightbox .prev,
+#lightbox .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: .5rem;
+    z-index: 4;
+}
+
+#lightbox .prev svg,
+#lightbox .next svg {
+    width: 3rem;
+    height: 3rem;
+    fill: #a3a3a3;
+}
+
+#lightbox .prev {
+    left: 0;
+}
+
+#lightbox .next {
+    right: 0;
+}
